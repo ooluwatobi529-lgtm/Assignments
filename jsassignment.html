@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script>
+
+//1 & 9
+        
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let doubledNumbers = numbers.map(num => num * 2);
+
+console.log("Original array:", numbers);
+console.log("Doubled array:", doubledNumbers);
+
+let sortedNumbers = numbers.sort((a, b) => a - b);
+
+console.log(sortedNumbers);
+
+//2
+
+
+let score = [45, 67, 89, 34, 90, 76, 54];
+
+let highScores = score.filter(score => score > 60);
+
+console.log(highScores);
+
+//3 & 6
+
+let scores = [45, 67, 89, 34, 90, 76, 54];
+
+let totalSum = score.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(totalSum);
+
+let firstHighScore = scores.find(score => score > 80);
+
+console.log(firstHighScore);
+
+//4
+
+let fruits = ['apple', 'banana', 'mango', 'orange', 'pear'];
+
+let firstThree = fruits.slice(0, 3);
+
+console.log(firstThree);
+
+//5 & 7
+
+let fruit = ['apple', 'banana', 'mango', 'orange', 'pear'];
+
+fruits.splice(2, 1, 'grapes');
+
+console.log(fruits);
+
+fruits.forEach(fruit => {
+  console.log(fruit.toUpperCase());
+});
+
+//8
+
+let names = ['John', 'Jane', 'Mark', 'Mary'];
+
+let hasMark = names.includes('Mark');
+
+console.log(hasMark);
+
+//10
+
+let colors1 = ['red', 'blue'];
+let colors2 = ['green', 'yellow'];
+
+let combinedColors = colors1.concat(colors2);
+
+console.log(combinedColors);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
