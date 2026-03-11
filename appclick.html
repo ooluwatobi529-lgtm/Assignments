@@ -16,28 +16,31 @@
 
     <div class="portal">
         <div class="left-div">
-        <img src="https://appclick.ng/portal/uploads/school_content/admin_logo/1692202493-89741823864dcf5fd4617b!appclick-academy-logo-best-tech-training-center-in-ibadan-lagos-nigeria (1).png">
-    <div class="form">
+            <img src="https://appclick.ng/portal/uploads/school_content/admin_logo/1692202493-89741823864dcf5fd4617b!appclick-academy-logo-best-tech-training-center-in-ibadan-lagos-nigeria (1).png">
+    
+    <form class="loginForm">
         <h1>User Login</h1>
         <div class="input-box">
-            <input required type="text" placeholder="username">
+            <input class="username"  type="text" placeholder="username" required>
             <button class="env-btn">
         <i class="fa-solid fa-envelope"></i></button>
         </div>
 
         <div class="input-box2">
-            <input required type="text" placeholder="password">
+        
+            <input class="password"  type="password" placeholder="password" required>
         <button class="lock-btn">
             <i class="fa-solid fa-lock"></i></button>
         </div>
 
-            <button class="sign">sign in</button>
+            <button class="sign" type="submit">sign in</button>
 
         <div class="forgot">
             <i class="fa-solid fa-key"></i>
             <a href="https://appclick.ng/portal/site/forgotpassword">Forgot Password?</a></div>
     </div>
-     </div>
+</form>
+      <p class="message"></p>
 
      <div class="right-div">
         <img src="https://appclick.ng/portal/uploads/school_content/login_image/1690229717-162752723964bedbd546018!Stay-Ahead-in-the-Coding-World-with-These-Programming-Laptop-2.jpg">              
@@ -69,6 +72,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
 
        }
 
@@ -106,7 +110,7 @@
             text-align: left;
         }
 
-       .form {
+       .loginForm {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -224,6 +228,8 @@
     border-radius: 7px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
+    cursor: pointer;
+    touch-action: manipulation;
 
 }
 
@@ -267,9 +273,12 @@
 
        @media (max-width: 600px) {
         .portal { display: flex;
-            flex-direction: column;}
+            flex-direction: column; position: relative;}
+            
        }
-    </style>
-     
+
+</style>
+
+<script src="appclick.js"></script>
 </body>
 </html>
