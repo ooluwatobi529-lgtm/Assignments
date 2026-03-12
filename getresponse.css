@@ -3,6 +3,13 @@ body {
     padding: 0;
 }
 
+.carousel-img {
+    max-height: 60vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
 @font-face {
     font-family: Rubik;
     src: url(https://us-wn-g.gr-cdn.com/_next/static/media/Rubik-basic.6d1dafea.woff2);
