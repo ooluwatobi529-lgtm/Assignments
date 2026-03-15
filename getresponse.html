@@ -1,60 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetResponse</title>
-    <link rel="stylesheet" href="getresponse.css" />
-    <link rel="stylesheet" href="https://us-wn-g.gr-cdn.com/_next/static/media/Rubik-basic.6d1dafea.woff2" />
-</head>
-<body>
-    <nav>       
-    <div class="left-div"></div>
-    <h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="19" viewBox="0 0 446.6 59"><path fill="#00baff" d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z"></path><path fill="#fff" d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3"></path><path d="M433.8 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM163.4 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM246.2 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM360.5 26.3q0-1.2-1.2-1.2H357V19h6.6c2.5 0 3.8 1.2 3.8 3.2v.8c0 .6-.1 1.2-.1 1.2h.1c1.2-2.4 4.3-6 10.2-6 6.4 0 10 3.3 10 10.9v11.2q0 1.2 1.2 1.2h2.3v6h-6.8c-2.7 0-3.8-1.1-3.8-3.8v-13c0-3.5-.9-5.9-4.5-5.9-3.8 0-6.7 2.4-7.7 5.9-.4 1.2-.6 2.5-.6 3.8v13.2h-7.1V26.3zM339.4 18.3c8.8 0 15.8 6.3 15.8 15.1 0 8.9-7 15.1-15.8 15.1-8.7 0-15.7-6.2-15.7-15.1s7-15.1 15.7-15.1m0 24c4.7 0 8.6-3.6 8.6-9 0-5.3-3.9-9-8.6-9-4.6 0-8.5 3.7-8.5 9 0 5.4 3.9 9 8.5 9M320.3 33.3c0 8.9-5 15.1-12.7 15.1-6.2 0-8.6-4.1-8.6-4.1h-.1s.1 1 .1 2.5V59h-7.2V26.3c0-.8-.5-1.2-1.2-1.2h-2.3V19h6.3c2.6 0 3.7 1.1 3.7 2.5v1h.1s2.4-4.2 8.9-4.2c7.6 0 13 5.9 13 15m-14.3 9c4.2 0 7.2-3.5 7.2-9 0-5.7-3.3-8.9-7.2-8.9-4.8 0-7.2 4.4-7.2 8.9-.1 6.3 3.4 9 7.2 9M266 38.6s3.7 4.2 8.6 4.2c2.2 0 3.9-.9 3.9-2.8 0-4.1-15.2-4-15.2-13.3 0-5.8 5.2-8.4 11.2-8.4 3.9 0 10.1 1.3 10.1 6v3h-6.3v-1.4c0-1.4-2-2-3.6-2-2.5 0-4.3.9-4.3 2.6 0 4.5 15.3 3.6 15.3 13.2 0 5.4-4.8 8.8-11.1 8.8-7.9 0-12-5.1-12-5.1zM397 38.6s3.7 4.2 8.6 4.2c2.2 0 3.9-.9 3.9-2.8 0-4.1-15.2-4-15.2-13.3 0-5.8 5.2-8.4 11.2-8.4 3.9 0 10.1 1.3 10.1 6v3h-6.3v-1.4c0-1.4-2-2-3.6-2-2.5 0-4.3.9-4.3 2.6 0 4.5 15.3 3.6 15.3 13.2 0 5.4-4.8 8.8-11 8.8-7.9 0-12-5.1-12-5.1zM195 41.7c-2 0-5.7-.7-5.7-5.4V24.6h6.5V22c0-2.1-.9-3-3-3h-3.5v-7.8h-7V19h-3.9v5.7h3.7v12.5c0 9.6 8 10.8 12 10.8 1.3 0 2.2-.2 2.2-.2v-6.3c0 .1-.5.2-1.3.2M127.7 7c9.8 0 14.6 5.1 14.6 5.1l-4.2 5.3s-4.2-3.6-10.3-3.6c-6.9 0-12.9 5.5-12.9 13.6 0 8.7 6 14.1 13.1 14.1 6.4 0 10.2-4.2 10.2-4.2v-3c0-.8-.5-1.2-1.2-1.2h-2.4v-6.3h6.5c2.7 0 3.8 1.1 3.8 3.8v17.1h-6.3v-1.9c0-.8.1-1.7.1-1.7h-.1s-4.3 4.3-11.8 4.3c-10.5 0-19.5-8-19.5-20.9 0-11.6 8.8-20.5 20.4-20.5M200.3 7.6h14.3c7.3 0 12.5 4.5 12.5 12.1 0 7.2-5 10.2-6.7 10.6v.1s1.2.6 2 2l3.9 7.7c.6 1.2 1.6 1.3 2.8 1.3h.7v6.3H226c-3 0-4.3-.5-5.6-3l-5.1-10.1c-.8-1.6-1.7-1.9-3.8-1.9h-3.7v15h-7.4V7.6zm13.3 18.8c3.7 0 5.9-2.3 5.9-6.3 0-3.9-2.2-6.2-5.8-6.2h-6v12.5z"></path></svg>
-    </h1>
-    <ul>
-        <li class="dropdown">product </li>
-        <!-- <div class="dropdown-content">
-            <a>1234</a>
-            <a>2345</a>
-            <a>3456</a>
-            <a>4567</a>
-        </div> -->
-        <li>Resourses </li>
-        <li>Enterprise</li>
-        <li>pricing</li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Response</title>
+    <link rel="stylesheet" href="assignwaleone.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="left-nav">
+        <ul class="array">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="140"
+            height="19"
+            viewBox="0 0 446.6 59"
+          >
+            <path
+              fill="#00baff"
+              d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3"
+            ></path>
+            <path
+              d="M433.8 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM163.4 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM246.2 18.3c8.2 0 12.7 6 12.7 13.6 0 .8-.2 2.7-.2 2.7h-19.8c.6 5.1 4.3 7.7 8.6 7.7 4.6 0 8.1-3.2 8.1-3.2l3 5s-4.4 4.3-11.6 4.3c-9.5 0-15.5-6.9-15.5-15.1.1-8.8 6.1-15 14.7-15m5.4 11.3c-.1-3.4-2.5-5.8-5.4-5.8-3.7 0-6.3 2.2-7 5.8zM360.5 26.3q0-1.2-1.2-1.2H357V19h6.6c2.5 0 3.8 1.2 3.8 3.2v.8c0 .6-.1 1.2-.1 1.2h.1c1.2-2.4 4.3-6 10.2-6 6.4 0 10 3.3 10 10.9v11.2q0 1.2 1.2 1.2h2.3v6h-6.8c-2.7 0-3.8-1.1-3.8-3.8v-13c0-3.5-.9-5.9-4.5-5.9-3.8 0-6.7 2.4-7.7 5.9-.4 1.2-.6 2.5-.6 3.8v13.2h-7.1V26.3zM339.4 18.3c8.8 0 15.8 6.3 15.8 15.1 0 8.9-7 15.1-15.8 15.1-8.7 0-15.7-6.2-15.7-15.1s7-15.1 15.7-15.1m0 24c4.7 0 8.6-3.6 8.6-9 0-5.3-3.9-9-8.6-9-4.6 0-8.5 3.7-8.5 9 0 5.4 3.9 9 8.5 9M320.3 33.3c0 8.9-5 15.1-12.7 15.1-6.2 0-8.6-4.1-8.6-4.1h-.1s.1 1 .1 2.5V59h-7.2V26.3c0-.8-.5-1.2-1.2-1.2h-2.3V19h6.3c2.6 0 3.7 1.1 3.7 2.5v1h.1s2.4-4.2 8.9-4.2c7.6 0 13 5.9 13 15m-14.3 9c4.2 0 7.2-3.5 7.2-9 0-5.7-3.3-8.9-7.2-8.9-4.8 0-7.2 4.4-7.2 8.9-.1 6.3 3.4 9 7.2 9M266 38.6s3.7 4.2 8.6 4.2c2.2 0 3.9-.9 3.9-2.8 0-4.1-15.2-4-15.2-13.3 0-5.8 5.2-8.4 11.2-8.4 3.9 0 10.1 1.3 10.1 6v3h-6.3v-1.4c0-1.4-2-2-3.6-2-2.5 0-4.3.9-4.3 2.6 0 4.5 15.3 3.6 15.3 13.2 0 5.4-4.8 8.8-11.1 8.8-7.9 0-12-5.1-12-5.1zM397 38.6s3.7 4.2 8.6 4.2c2.2 0 3.9-.9 3.9-2.8 0-4.1-15.2-4-15.2-13.3 0-5.8 5.2-8.4 11.2-8.4 3.9 0 10.1 1.3 10.1 6v3h-6.3v-1.4c0-1.4-2-2-3.6-2-2.5 0-4.3.9-4.3 2.6 0 4.5 15.3 3.6 15.3 13.2 0 5.4-4.8 8.8-11 8.8-7.9 0-12-5.1-12-5.1zM195 41.7c-2 0-5.7-.7-5.7-5.4V24.6h6.5V22c0-2.1-.9-3-3-3h-3.5v-7.8h-7V19h-3.9v5.7h3.7v12.5c0 9.6 8 10.8 12 10.8 1.3 0 2.2-.2 2.2-.2v-6.3c0 .1-.5.2-1.3.2M127.7 7c9.8 0 14.6 5.1 14.6 5.1l-4.2 5.3s-4.2-3.6-10.3-3.6c-6.9 0-12.9 5.5-12.9 13.6 0 8.7 6 14.1 13.1 14.1 6.4 0 10.2-4.2 10.2-4.2v-3c0-.8-.5-1.2-1.2-1.2h-2.4v-6.3h6.5c2.7 0 3.8 1.1 3.8 3.8v17.1h-6.3v-1.9c0-.8.1-1.7.1-1.7h-.1s-4.3 4.3-11.8 4.3c-10.5 0-19.5-8-19.5-20.9 0-11.6 8.8-20.5 20.4-20.5M200.3 7.6h14.3c7.3 0 12.5 4.5 12.5 12.1 0 7.2-5 10.2-6.7 10.6v.1s1.2.6 2 2l3.9 7.7c.6 1.2 1.6 1.3 2.8 1.3h.7v6.3H226c-3 0-4.3-.5-5.6-3l-5.1-10.1c-.8-1.6-1.7-1.9-3.8-1.9h-3.7v15h-7.4V7.6zm13.3 18.8c3.7 0 5.9-2.3 5.9-6.3 0-3.9-2.2-6.2-5.8-6.2h-6v12.5z"
+            ></path>
+          </svg>
+          <li>Product &rsaquo;</li>
+          <li>Resources &rsaquo;</li>
+          <li>Enterprise</li>
+          <li>Pricing</li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <button class="login">Log in</button>
+        <button class="demo">Book a demo</button>
+        <button class="sign-up">Sign up free</button>
+      </div>
+      <div class="menu"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <div class="nav-spacer"></div>
+    <div class="first-div">
+      <div class="limitless">
+        <h1>
+          <span class="limitless-span">Limitless</span> access to the tools that
+          move your business forward — and sell more
+        </h1>
+      </div>
+    </div>
 
-    <div class="right-div">
-        <button class="login-btn">Log in</button>
-        <button class="demo-btn">book a demo</button>
-        <button class="signup-btn">sign up free</button>
-    </div></nav>
-    
-    <div class="theheading-div">
+    <section class="section-1">
+      <div class="section-1-div-1">
+        <img
+          src="https://us-wn-g.gr-cdn.com/_next/static/media/img@1x.f9a5c65c.png"
+        />
+      </div>
+      <div class="section-1-div-2">
+        <h1><span class="unlimited">Unlimited</span><br />newsletters</h1>
         <p>
-            <span class="tryforfree-span">Try for free, upgrade when ready</span><br>
-Get the AI-powered email and automation tools you need now—in one affordable platform.</p>
-</div>
+          Send unlimited emails with AI that writes subject lines, tailors
+          content to your audience, and recommends the best send time
+        </p>
+        <button class="learn-more-btn">
+          Learn more <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
 
-<section>
-    <div>logo</div>
-    <div>write ups</div>
-</section>
+    <section class="section-1">
+      <div class="section-1-div-1">
+        <img
+          src="https://us-wn-g.gr-cdn.com/_next/static/media/img@1x.f7e68248.png"
+        />
+      </div>
+      <div class="section-1-div-2">
+        <h1><span class="unlimited">Unlimited</span><br />automations</h1>
+        <p>
+          Create journeys that welcome new customers, recover carts, or win back
+          subscribers - with AI that finds the best time to reach each customer
+        </p>
+        <button class="learn-more-btn">
+          Learn more <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
 
-<footer>
-    <div>logo</div>
-    <div>writings</div>
-    <div>writings</div>
-</footer>
+    <section class="section-1">
+      <div class="section-1-div-1">
+        <img
+          src="https://us-wn-g.gr-cdn.com/_next/static/media/img@1x.3e579f2d.png"
+        />
+      </div>
+      <div class="section-1-div-2">
+        <h1><span class="unlimited">Unlimited</span><br />landing pages</h1>
+        <p>
+          Publish pages for launches, flash sales, or lead capture - with AI
+          that writes copy, selects layouts, and helps you go live in minutes
+        </p>
+        <button class="learn-more-btn">
+          Learn more <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+    <div class="why">
+      <h2>Why GetResponse?</h2>
+    </div>
+    <section class="stat-container">
+      <div class="stat">
+        <h2>99%</h2>
+        <p><b>deliverability rate</b> <br />for 160+ countries</p>
+      </div>
+      <div class="stat">
+        <h2>150%</h2>
+        <p><b>integrations</b></p>
+      </div>
+      <div class="stat">
+        <h2>350k+</h2>
+        <p>
+          <b>customers worldwide</b> <br />trust us with their email
+          <br />marketing
+        </p>
+      </div>
+      <div class="stat">
+        <h2>24/7</h2>
+        <p>
+          support from a <b>5-star <br />rated</b> Customer Success <br />Team
+        </p>
+      </div>
+    </section>
 
-<!-- <select name="" id="">
-    <option></option>
-    <option></option>
-    <option></option>
-    <option></option>
-</select> -->
-    
-</body>
+    <section class="white-section">
+      <div class="white-section-div">
+        <div class="white-section-arrow-left">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="white-section-1">
+          <h3>
+            We generated $43,000 in<br />
+            sales with just 10 emails<br />
+            using GetResponse.
+          </h3>
+          <p>
+            Szymon Grocholewski<br />
+            <span
+              >CEO<br />
+              at Med&Beauty</span
+            >
+          </p>
+          <button>
+            Read full case study <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="white-section-div-2">
+        <div>
+          <img
+            src="https://us-wn-g.gr-cdn.com/_next/static/media/med_beauty@1x.ff0c272b.png"
+          />
+        </div>
+        <div class="white-section-arrow-right">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+    <section class="section-2">
+      <div class="section-2-div-1">
+        <h2>
+          Sync your data and growth<br />
+          with 150+ integrations
+        </h2>
+      </div>
+      <div class="section-2-div-2">
+        <p>
+          Easily connect other tools with GetResponse to keep your data
+          up-to-date, automate workflows and enhance your customer experience.
+        </p>
+      </div>
+      <div class="section-2-div-3">
+        <button>
+          Browse integrations <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+    <section class="section-3">
+      <div class="div-take-further">
+        <h2>
+          Take further control of your marketing using<br />
+          our additional suite of AI tools and features.
+        </h2>
+      </div>
+
+      <div class="div-row">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            fill="none"
+            viewBox="0 0 48 48"
+          >
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M24.86 13.74h-13.6M1.54 5.98h5.54c2.12 0 2.68 2.2 2.86 2.86s5.1 21.48 5.1 21.48.6 2.88 2.88 2.88h18.74c2.22 0 2.8-2.82 2.86-3.12.14-.62.44-2.02.82-3.7M34.5 43a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2ZM19.7 43a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2Z"
+            ></path>
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M45.24 5H26.3a1.22 1.22 0 0 0-1.22 1.22v18.94c0 .674.546 1.22 1.22 1.22h18.94a1.22 1.22 0 0 0 1.22-1.22V6.22A1.22 1.22 0 0 0 45.24 5Z"
+            ></path>
+            <path
+              fill="#00A2FF"
+              d="M31.9 18.86h3.06l.74 2.1H38l-3.52-9.72H32.4l-3.42 9.72h2.26l.7-2.1zm.68-2.02.84-2.52.86 2.52zM41.64 11.24H39.3v9.72h2.34z"
+            ></path>
+          </svg>
+          <h4>AI product recommendations</h4>
+          <p>
+            Personalize your website's shopping<br />
+            experience and email campaigns<br />
+            with automated recommendations
+          </p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="48"
+            fill="none"
+            viewBox="0 0 49 48"
+          >
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M39.687 12.88h-13.9a3.014 3.014 0 0 0-3.08 2.94v7.4c0 1.68 1.38 3.02 3.06 3h1.14v3.38l4.36-3.38h8.36c1.68.04 3.06-1.3 3.08-2.96v-7.38c.06-1.6-1.18-2.94-2.78-3h-.24Z"
+            ></path>
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M32.867 27.38v13.08a3.375 3.375 0 0 1-3.22 3.52h-15.68a3.376 3.376 0 0 1-3.34-3.42V7.52A3.375 3.375 0 0 1 13.847 4h15.68c1.86.02 3.36 1.54 3.34 3.4v4.4M18.427 8.7h6.66"
+            ></path>
+            <path
+              fill="#00A2FF"
+              stroke="#00A2FF"
+              stroke-width="0.5"
+              d="M23.427 38.96c0 .92-.74 1.66-1.66 1.66s-1.66-.74-1.66-1.66.74-1.66 1.66-1.66 1.66.74 1.66 1.66Z"
+            ></path>
+          </svg>
+          <h4>SMS</h4>
+          <p>
+            Reach your customers directly with SMS,<br />
+            built into your email marketing & automation<br />
+            platform
+          </p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="48"
+            fill="none"
+            viewBox="0 0 49 48"
+          >
+            <g stroke="#00A2FF" clip-path="url(#f75ba_a)">
+              <path
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M43.653 42H5.013c-1.66.1-3.08-1.18-3.18-2.84V8.94A3.014 3.014 0 0 1 4.913 6h38.74c1.66-.1 3.08 1.18 3.18 2.84v30.22a3.014 3.014 0 0 1-3.08 2.94z"
+              ></path>
+              <path
+                fill="#00A2FF"
+                stroke-width="0.5"
+                d="M12.113 10.5c0 .62-.5 1.12-1.12 1.12s-1.12-.5-1.12-1.12.5-1.12 1.12-1.12 1.12.5 1.12 1.12ZM16.613 10.5c0 .62-.5 1.12-1.12 1.12s-1.12-.5-1.12-1.12.5-1.12 1.12-1.12 1.12.5 1.12 1.12ZM7.613 10.5c0 .62-.5 1.12-1.12 1.12s-1.12-.5-1.12-1.12.5-1.12 1.12-1.12 1.12.5 1.12 1.12Z"
+              ></path>
+              <path
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M26.333 33.56a1.9 1.9 0 0 1-1.9 1.9c-1.06 0-1.9-.84-1.9-1.9"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M27.013 16.04a2.554 2.554 0 0 0-2.66-2.46c-1.34.06-2.4 1.12-2.46 2.46"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="3"
+                d="M21.893 16.04c-1.4.6-2.62 1.52-3.58 2.7a8 8 0 0 0-1.22 4.42v5.26l-1.62 1.68c-.36.4-.44.98-.2 1.48.2.5.68.82 1.22.84h15.94c.54 0 1-.34 1.22-.84.24-.48.16-1.06-.2-1.48l-1.62-1.68v-5.26c.04-1.56-.38-3.1-1.22-4.42a9.34 9.34 0 0 0-3.58-2.7"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="f75ba_a">
+                <path fill="#fff" d="M.333 0h48v48h-48z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+          <h4>Web-push notifications</h4>
+          <p>
+            Bring website visitors back with quick<br />
+            and hard-to-miss messages
+          </p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="48"
+            fill="none"
+            viewBox="0 0 49 48"
+          >
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M42.367 7.5h-35.4a2.52 2.52 0 0 0-2.56 2.48v28.04c.02 1.38 1.16 2.5 2.56 2.48h35.38c1.38.02 2.54-1.08 2.56-2.48V9.98a2.523 2.523 0 0 0-2.56-2.48zM12.287 32.26h18.56M12.287 26.06h24.76M34.987 12.66l4.12 4.12M34.987 16.78l4.12-4.12"
+            ></path>
+          </svg>
+          <h4>Forms and Popups</h4>
+          <p>
+            Create, edit, and manage popups, banners,<br />
+            and bars that engage your audience
+          </p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            fill="none"
+            viewBox="0 0 48 48"
+          >
+            <path
+              stroke="#00A2FF"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="m18 41-.02-16.92-10.84-12.3c-1.44-1.92-1.2-3.38-.96-4.1C6.66 6.48 8.1 6 10.04 6h27.94c1.92 0 3.38.72 3.86 1.68.24.72.48 2.16-.96 4.1L30.04 24.06v10.48c0 .46-.24.9-.64 1.14L18.98 41.9c-.3.18-.7.08-.88-.22-.06-.1-.1-.22-.1-.32z"
+            ></path>
+          </svg>
+          <h4>Funnels</h4>
+          <p>
+            Our automated sales funnel creator helps<br />
+            convert your customers faster
+          </p>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="49"
+            height="48"
+            fill="none"
+            viewBox="0 0 49 48"
+          >
+            <path
+              stroke="#00A2FF"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="M24.331 34.356V44m0-9.644c-8.378 0-15.178-6.8-15.178-15.178S15.953 4 24.331 4 39.51 10.8 39.51 19.178s-6.8 15.178-15.178 15.178ZM15.71 44H32.93m-8.6-29.822c-2.755 0-5 2.244-5 5s2.245 5 5 5 5-2.245 5-5-2.244-5-5-5Z"
+            ></path>
+          </svg>
+          <h4>webinars</h4>
+          <p>
+            Easily host, record, and promote<br />
+            webinars to nurture your leads
+          </p>
+        </div>
+      </div>
+      <div class="div-feature">
+        <h4>See all features <i class="fa-solid fa-arrow-right"></i></h4>
+      </div>
+    </section>
+    <section class="section-4">
+      <div class="section-4-div-1">
+        <h2>
+          Join 350,000+ businesses<br />
+          growing sales with GetResponse<br />
+          email and automation
+        </h2>
+      </div>
+      <div class="section-4-div-2">
+        <form>
+          <label>Email address</label><br />
+          <div class="input-btn-div">
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              id="email"
+            />
+            <button class="start-free-btn">
+              Start free trial <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="section-4-div-3">
+        <p>Free 14-day trial | No credit card required | Cancel anytime</p>
+      </div>
+    </section>
+
+    <section class="section-5">
+      <div class="li-div">
+        <ul class="list">
+          <li><h4>Product</h4></li>
+          <li>Email marketing</li>
+          <li>AI email generator</li>
+          <li>Autoresponders</li>
+          <li>Marketing automation</li>
+          <li>Website builder</li>
+          <li>Landing pages</li>
+          <li>Forms and popups</li>
+          <li>Content monetization</li>
+          <li>All features</li>
+          <li>GetResponse Free Trial</li>
+          <li>Integrations</li>
+          <li>Book a demo</li>
+          <li>Pricing</li>
+        </ul>
+
+        <ul class="list">
+          <li><h4>Help and resources</h4></li>
+          <li>Help center</li>
+          <li>Glossary</li>
+          <li>Contact support</li>
+          <li>Online marketing resources</li>
+          <li>Customer stories</li>
+          <li>GetResponse Academy</li>
+          <li>Webinar library</li>
+          <li>Email templates</li>
+          <li>Website templates</li>
+          <li>Compare us with others</li>
+          <li>API Docs</li>
+          <li>Move to GetResponse</li>
+        </ul>
+
+        <ul class="list">
+          <li><h4>Company</h4></li>
+          <li>About us</li>
+          <li>Careers</li>
+          <li>Press center</li>
+          <li>What’s new</li>
+          <li>Affiliate programs</li>
+          <li>Agency partners</li>
+          <li>Investor relations</li>
+          <li>Accessibility statement</li>
+          <li>Reporting policy</li>
+        </ul>
+      </div>
+
+      <div class="side-by-side">
+        <h4>Top blog content</h4>
+        <div class="side-by-side-div">
+          <img
+            src="https://us-rd.gr-cdn.com/102x68/https://us-wd.gr-cdn.com/blog/sites/5/2025/08/1449/getresponse-web-automations-600x400.jpg"
+          />
+          <p>
+            Beyond email: How Web Automation<br />
+            captures revenue from anonymous<br />
+            visitors
+          </p>
+        </div>
+
+        <div class="side-by-side-div">
+          <img
+            src="https://us-rd.gr-cdn.com/102x68/https://us-wd.gr-cdn.com/blog/sites/5/2025/08/1547/getresponse-bot-detector-600x400.jpg"
+          />
+          <p>
+            Introducing Bot Detection: Measure real<br />
+            human engagement, not bots
+          </p>
+        </div>
+
+        <div class="side-by-side-div">
+          <img
+            src="https://us-rd.gr-cdn.com/102x68/https://us-wd.gr-cdn.com/blog/sites/5/2025/11/1513/gmail-email-annotations-guide-600x404.jpg"
+          />
+          <p>
+            How to stand out in the Promotions tab<br />
+            with Gmail email annotations
+          </p>
+        </div>
+
+        <div class="visit"><p>Visit our blog to learn more</p></div>
+      </div>
+    </section>
+  </body>
 </html>
