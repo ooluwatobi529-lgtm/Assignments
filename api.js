@@ -52,11 +52,10 @@ cheapProduct.forEach((product) => {
     <h3>${product.title}</h3>
     <p>${product.description}</p>
     <strong>${product.price}</strong>
-    <button> Add to card </button>
+    <button> puchase </button>
     `;
 
-
-
+    
     container.appendChild(productEl);
 });
     } catch (error) {
